@@ -398,4 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Prevent angular cache files to be included
-.angular/cache/
+**/.angular/
