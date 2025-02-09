@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace KenalanDenganCSharp
 {
-    public class Chicken : Bird
+    internal class ComparerFish<T> : IComparer<T>
     {
-        public override int FingerCount { get { return 4; }}
-
-        public override void Run()
+        public int Compare(T? x, T? y)
         {
-            base.Run();
+            throw new NotImplementedException();
         }
-
     }
 }

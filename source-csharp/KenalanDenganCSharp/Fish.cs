@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace KenalanDenganCSharp
 {
-    public class Chicken : Bird
+    public class Fish : Animal
     {
-        public override int FingerCount { get { return 4; }}
+        public override string? SkinColor { get; set; }
+
+        private string? testString;
 
         public override void Run()
         {
-            base.Run();
+            throw new NotImplementedException();
         }
-
     }
 }

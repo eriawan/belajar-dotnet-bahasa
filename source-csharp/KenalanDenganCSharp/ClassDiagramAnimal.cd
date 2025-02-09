@@ -3,7 +3,7 @@
   <Class Name="KenalanDenganCSharp.Animal">
     <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAEAgAEAAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAEAgAEAAAAAAAAAQAAAAAAQAAAAAAAAAAAAI=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,22 +11,36 @@
   <Class Name="KenalanDenganCSharp.Bird">
     <Position X="3.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAI=</HashCode>
       <FileName>Bird.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KenalanDenganCSharp.Chicken">
     <Position X="5.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAI=</HashCode>
       <FileName>Chicken.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KenalanDenganCSharp.Eagle">
     <Position X="2" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAI=</HashCode>
       <FileName>Eagle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KenalanDenganCSharp.Fish">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Fish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KenalanDenganCSharp.CatFish">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CatFish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="KenalanDenganCSharp.IRunnable">
