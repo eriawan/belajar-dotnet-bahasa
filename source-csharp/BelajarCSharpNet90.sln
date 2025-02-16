@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenalanDenganCSharp", "Kena
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ContohConsoleVBNetCore", "ContohConsoleVBNetCore\ContohConsoleVBNetCore.vbproj", "{79ECE7DD-8610-4154-843D-A4D85BE5E90D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleNetFramework35Console", "SampleNetFramework35Console\SampleNetFramework35Console.csproj", "{0CD9F661-743A-4923-8E3D-6945D9A6A8FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleNetFramework48Console", "SampleNetFramework48Console\SampleNetFramework48Console.csproj", "{9BF8A231-7115-457E-88EA-CB8DB587AA28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KumpulanFiturGagasanDibalikLinq", "KumpulanFiturGagasanDibalikLinq\KumpulanFiturGagasanDibalikLinq.csproj", "{F422CEBF-78FD-4537-8C59-625934A3DF93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,23 @@ Global
 		{79ECE7DD-8610-4154-843D-A4D85BE5E90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79ECE7DD-8610-4154-843D-A4D85BE5E90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79ECE7DD-8610-4154-843D-A4D85BE5E90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD9F661-743A-4923-8E3D-6945D9A6A8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD9F661-743A-4923-8E3D-6945D9A6A8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD9F661-743A-4923-8E3D-6945D9A6A8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD9F661-743A-4923-8E3D-6945D9A6A8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BF8A231-7115-457E-88EA-CB8DB587AA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF8A231-7115-457E-88EA-CB8DB587AA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF8A231-7115-457E-88EA-CB8DB587AA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF8A231-7115-457E-88EA-CB8DB587AA28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F422CEBF-78FD-4537-8C59-625934A3DF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F422CEBF-78FD-4537-8C59-625934A3DF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F422CEBF-78FD-4537-8C59-625934A3DF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F422CEBF-78FD-4537-8C59-625934A3DF93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D068BEF2-6660-4213-83EE-F773030ABF50}
 	EndGlobalSection
 EndGlobal

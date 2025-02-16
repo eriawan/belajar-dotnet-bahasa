@@ -25,3 +25,26 @@ Console.WriteLine(list.Count);
 IComparer<CatFish> compareCatFish = new ComparerFish<CatFish>();
 Fish ortunyaCatfish = new Fish();
 compareCatFish.Compare((CatFish)ortunyaCatfish, new CatFish());
+
+ClassConstructorDenganParameter classConstructorDenganParameter = new ClassConstructorDenganParameter("testing");
+
+List<Bird> birds = new List<Bird>();
+birds.Add(new Chicken());
+IEnumerable<Bird> birdsEnumerable = new List<Chicken>();
+//Func<int, bool> cekGenap = (bilangan) => bilangan % 2 == 0;
+//Func<int, bool> cekGenap = (bilangan) =>
+//{
+//    bilangan = bilangan + 0;
+//    return (bilangan % 2 == 0);
+//};
+Func<int, bool> cekGenap = delegate(int bilangan) { return (bilangan % 2 == 0); };
+
+//Action<int> tidur = (durasitidur) => System.Threading.Thread.Sleep(durasitidur);
+//Action<int> tidur = (durasitidur) =>
+//{
+//    System.Threading.Thread.Sleep(durasitidur);
+//};
+Action<int> tidur = delegate(int durasitidur) { System.Threading.Thread.Sleep(durasitidur); };
+
+
+
