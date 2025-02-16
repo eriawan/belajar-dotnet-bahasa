@@ -10,7 +10,7 @@ namespace SampleNetFramework48Console
         public bool CanFly { get; set; }
         public bool CanSwim { get; set; }
 
-        public abstract string? SkinColor { get; set; }
+        public abstract string SkinColor { get; set; }
 
         public void Reproduce()
         {

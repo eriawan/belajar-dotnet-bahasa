@@ -10,8 +10,8 @@ namespace SampleNetFramework48Console
     {
         static void Main(string[] args)
         {
-            IEnumerable<Bird> birds = new List<Bird>();
-            birds.Add(new Chicken());
+            // Kode di bawah ini tidak akan jalan di .NET Framework yang runtimenya versi 2.0
+            // Di .NET Framework runtime v4.0 bisa
             IEnumerable<Bird> birdsEnumerable = new List<Chicken>();
         }
     }
