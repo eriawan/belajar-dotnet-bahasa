@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace KumpulanFiturGagasanDibalikLinq.DataType
 {
-    public class Mahasiswa
+    public class MasterKota
     {
-        public string? NamaDepan { get; set; }
-
-        public string? NamaBelakang { get; set; }
-
-        public DateTime? TglLahir { get; set; }
-
         public int KotaId { get; set; }
-
+        public string Kota { get; set; } = String.Empty;
     }
 }
