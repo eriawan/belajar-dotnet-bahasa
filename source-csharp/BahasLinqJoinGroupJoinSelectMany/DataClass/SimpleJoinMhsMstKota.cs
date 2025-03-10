@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace BahasLinqJoinGroupJoinSelectMany.DataClass
 {
-    public class Mahasiswa
+    class SimpleJoinMhsMstKota
     {
         public string NamaDepan { get; set; } = string.Empty;
-
         public string NamaBelakang { get; set; } = string.Empty;
-
-        public DateTime? TglLahir { get; set; }
-
         public int KotaId { get; set; }
-
-        public List<int> MataKuliahYangDiambil { get; set; } = new();
+        public string Kota { get; set; } = string.Empty;
     }
 }
