@@ -23,7 +23,7 @@ Console.WriteLine(list.Count);
 Console.WriteLine(list.Count);
 
 IComparer<CatFish> compareCatFish = new ComparerFish<CatFish>();
-Fish ortunyaCatfish = new Fish();
+Fish ortunyaCatfish = new CatFish();
 compareCatFish.Compare((CatFish)ortunyaCatfish, new CatFish());
 
 ClassConstructorDenganParameter classConstructorDenganParameter = new ClassConstructorDenganParameter("testing");
