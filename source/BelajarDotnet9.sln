@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContohBlazorWebAppNet9", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContohBlazorWasmNet9", "ContohBlazorWasmNet9\ContohBlazorWasmNet9.csproj", "{1FFF8C6A-378F-49D0-8895-B77952896AAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiMateriString", "DiskusiMateriString\DiskusiMateriString.csproj", "{849EB14C-C438-4880-B5E1-769E035BA203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,8 +53,15 @@ Global
 		{1FFF8C6A-378F-49D0-8895-B77952896AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FFF8C6A-378F-49D0-8895-B77952896AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FFF8C6A-378F-49D0-8895-B77952896AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849EB14C-C438-4880-B5E1-769E035BA203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849EB14C-C438-4880-B5E1-769E035BA203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849EB14C-C438-4880-B5E1-769E035BA203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849EB14C-C438-4880-B5E1-769E035BA203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A039E6E6-5AFF-45D7-8626-D154E3D283B7}
 	EndGlobalSection
 EndGlobal
