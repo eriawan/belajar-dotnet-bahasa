@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContohBlazorWasmNet9", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiMateriString", "DiskusiMateriString\DiskusiMateriString.csproj", "{849EB14C-C438-4880-B5E1-769E035BA203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIskusiMateriValueTypeRefType", "DIskusiMateriValueTypeRefType\DIskusiMateriValueTypeRefType.csproj", "{DB455A35-2DA8-4275-9CFD-A32E5AC431FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiStructRefTypeNetFramework", "DiskusiStructRefTypeNetFramework\DiskusiStructRefTypeNetFramework.csproj", "{974F925A-BDA2-4BFA-BEA1-50113817C79C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{849EB14C-C438-4880-B5E1-769E035BA203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849EB14C-C438-4880-B5E1-769E035BA203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849EB14C-C438-4880-B5E1-769E035BA203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB455A35-2DA8-4275-9CFD-A32E5AC431FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB455A35-2DA8-4275-9CFD-A32E5AC431FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB455A35-2DA8-4275-9CFD-A32E5AC431FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB455A35-2DA8-4275-9CFD-A32E5AC431FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
