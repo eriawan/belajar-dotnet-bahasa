@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIskusiMateriValueTypeRefTy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiStructRefTypeNetFramework", "DiskusiStructRefTypeNetFramework\DiskusiStructRefTypeNetFramework.csproj", "{974F925A-BDA2-4BFA-BEA1-50113817C79C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiSpanMemoryUnsafe", "DiskusiSpanMemoryUnsafe\DiskusiSpanMemoryUnsafe.csproj", "{220DB18A-FD89-4D74-AAF4-401F5E896F4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{974F925A-BDA2-4BFA-BEA1-50113817C79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
