@@ -1,24 +1,13 @@
 ﻿using System.Buffers;
+using System.Threading.Tasks;
 
 namespace DiskusiSpanMemoryUnsafe
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            //Span<int> numbers = stackalloc int[10];
-            //for (var i = 0; i < 10; i++)
-            //{
-            //    numbers[i] = i;
-            //}
-            //var numbersInt = new Int32[] { 10, 1, 2, 15, 2, 2, 2, 2, 2 };
-            ////ReadOnlySpan<int> numbersReadOnly = stackalloc int[10];
-            //ReadOnlySpan<int> numbersReadOnly = numbersInt.AsSpan();
-            //for (var i = 0; i < numbersReadOnly.Length; i++)
-            //{
-            //    Console.Write($"{numbersReadOnly[i]} ");
-            //}
 
             // Contoh pemakaian Memory<T> sesuai doc resmi
             // link: https://learn.microsoft.com/en-us/dotnet/standard/memory-and-spans/memory-t-usage-guidelines
@@ -53,15 +42,17 @@ namespace DiskusiSpanMemoryUnsafe
             //    owner?.Dispose();
             //}
 
-            unsafe
-            {
-                int length = 3;
-                int* numbers = stackalloc int[length];
-                for (var i = 0; i < length; i++)
-                {
-                    numbers[i] = i;
-                } 
-            }
+            //unsafe
+            //{
+            //    int length = 3;
+            //    int* numbers = stackalloc int[length];
+            //    for (var i = 0; i < length; i++)
+            //    {
+            //        numbers[i] = i;
+            //    } 
+            //}
+            //SamplesArraySegment.DisplayArraySegmentSamples();
+            await SamplesArraySegment.ArraySegmentSampleInAsync();
         }
 
         static void WriteInt32ToBuffer(int value, Memory<char> buffer)
