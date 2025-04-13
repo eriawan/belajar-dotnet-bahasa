@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 # Prevent angular cache files to be included
 **/.angular/
+/.idea
