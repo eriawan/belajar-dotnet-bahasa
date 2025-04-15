@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiStructRefTypeNetFram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiSpanMemoryUnsafe", "DiskusiSpanMemoryUnsafe\DiskusiSpanMemoryUnsafe.csproj", "{220DB18A-FD89-4D74-AAF4-401F5E896F4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiAsyncAwaitDenganContohWinforms", "DiskusiAsyncAwaitDenganContohWinforms\DiskusiAsyncAwaitDenganContohWinforms.csproj", "{8C097896-6796-A615-88B1-9BEC56366904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{220DB18A-FD89-4D74-AAF4-401F5E896F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C097896-6796-A615-88B1-9BEC56366904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C097896-6796-A615-88B1-9BEC56366904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C097896-6796-A615-88B1-9BEC56366904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C097896-6796-A615-88B1-9BEC56366904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
