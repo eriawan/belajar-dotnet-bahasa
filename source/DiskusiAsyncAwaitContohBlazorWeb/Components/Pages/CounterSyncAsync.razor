@@ -1,26 +1,87 @@
 ﻿@page "/counter-syncasync-1"
+@rendermode InteractiveServer
+@using System.Timers
+@implements IDisposable
 
 <PageTitle>Sample of Counter Synchronous and Asynchronous 1</PageTitle>
 
 <h1>Counter Synchronous and Asynchronous</h1>
 
 <p>
-    This component demonstrates how to use synchronous and asynchronous code in Blazor.
+    This component demonstrates how to use synchronous and asynchronous code in Blazor. 
+    To further visualize the blocking and non-blocking, we utilize System.Timers.Timer.
 </p>
+
+<p>
+    This code sample is inspired by Blazor samples, and the code is at
+    <a href="https://github.com/dotnet/blazor-samples/tree/main/9.0/BlazorSample_BlazorWebApp">
+        https://github.com/dotnet/blazor-samples/tree/main/9.0/BlazorSample_BlazorWebApp</a> and the GitHub repo is at: 
+    <a>https://github.com/dotnet/blazor-samples/</a>
+</p>
+
+<p>We are now displaying current system time, and this time is represented as string.</p>
+<p>Current time is: @timeText </p>
+
 <p>
     First sample: The counter is incremented synchronously when you click the button.
 </p>
 <p>
-    <button class="btn btn-primary">Click me (run synchronously)</button>
+    Counter sync: @counterSync
+</p>
+<p>
+    <button class="btn btn-primary" @onclick=RunSynchronous>Click me (run synchronously)</button>
 </p>
 <p>
     Second sample: The counter is incremented asynchronously when you click the button.
 </p>
 <p>
-    <button class="btn btn-primary">Click me (run asynchronously)</button>
+    Counter sync: @counterAsync
+</p>
+<p>
+    <button class="btn btn-primary" @onclick=RunAsynchronous>Click me (run asynchronously)</button>
 </p>
 
 
 @code {
+    private string timeText = "00:00:00";
+    private int currentSecond = 0;
+    private int counterSync = 0;
+    private int counterAsync = 0;
+    private Timer timer = new Timer(1000);
 
+    protected override void OnInitialized()
+    {
+        timer.AutoReset = true;
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void RunSynchronous()
+    {
+        // Simulate a long-running synchronous operation for 20 seconds
+        Thread.Sleep(10000);
+        counterSync++;
+    }
+
+    private void RunAsynchronous()
+    {
+        // Simulate a long-running asynchronous operation for 20 seconds
+        Task.Delay(10000).ContinueWith(_ =>
+        {
+            counterAsync++;
+            InvokeAsync(StateHasChanged);
+        });
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            DateTime currentTime = DateTime.Now;
+            currentSecond = currentTime.Second;
+            timeText = currentTime.ToString("HH:mm:ss");
+            StateHasChanged();
+        });
+    }
+    public void Dispose() => timer.Dispose();
 }
