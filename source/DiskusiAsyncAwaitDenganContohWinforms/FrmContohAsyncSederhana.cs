@@ -20,13 +20,29 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
         private void ContohSynchronousProcess()
         {
             // block for approximately 40 seconds
-            Thread.Sleep(40000);
+            Thread.Sleep(30000);
         }
 
         private async Task ContohAsynchronousProcess()
         {
-            // non blocking for approximately 40 seconds
-            await Task.Delay(40000);
+            // non blocking for approximately 30 seconds
+            await Task.Delay(30000);
+        }
+
+        private async Task ContohAsynchronousProcessCrossThreadUI()
+        {
+            // non blocking for approximately 30 seconds
+            await Task.Delay(20000);
+            lblRunAsyncCrossThreadUI.Text = 
+                $"ContohAsynchronousProcessDebug finished Task.Delay, time = {DateTime.Now.ToString("HH:mm:ss")}";
+            //if (lblRunAsyncCrossThreadUI.InvokeRequired)
+            //{
+            //    lblRunAsyncCrossThreadUI.Invoke(new Action(() => lblRunAsyncCrossThreadUI.Text = "ContohAsynchronousProcessDebug finished Task.Delay"));
+            //}
+            //else
+            //{
+            //    lblRunAsyncCrossThreadUI.Text = "ContohAsynchronousProcessDebug finished Task.Delay";
+            //}
         }
 
         #endregion
@@ -51,6 +67,8 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
         private async void btnRunAsync_Click(object sender, EventArgs e)
         {
             await ContohAsynchronousProcess();
+            lblRunAsyncProcess.Text =
+                $"ContohAsynchronousProcess finished Task.Delay, time = {DateTime.Now.ToString("HH:mm:ss")}";
         }
 
         private void timerBlockingTest_Tick(object sender, EventArgs e)
@@ -65,6 +83,19 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
             //Process03();
             // start timer
             timerBlockingTest.Enabled = true;
+        }
+
+        private void btnRunAsyncSynchronously_Click(object sender, EventArgs e)
+        {
+            // call existing async method, but we are trying to run it synchronously
+            Task.Run(() => ContohAsynchronousProcess()).GetAwaiter().GetResult();
+            //ContohAsynchronousProcess().GetAwaiter().GetResult();
+            //ContohAsynchronousProcess().Wait();
+        }
+
+        private async void btnRunAsyncInCrossThread_Click(object sender, EventArgs e)
+        {
+            await ContohAsynchronousProcessCrossThreadUI();
         }
     }
 }

@@ -36,6 +36,10 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
             btnRunAsync = new Button();
             timerBlockingTest = new System.Windows.Forms.Timer(components);
             lblCurrentTime = new Label();
+            btnRunAsyncSynchronously = new Button();
+            lblRunAsyncCrossThreadUI = new Label();
+            btnRunAsyncInCrossThread = new Button();
+            lblRunAsyncProcess = new Label();
             SuspendLayout();
             // 
             // lblSyncProcess
@@ -90,11 +94,53 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
             lblCurrentTime.TabIndex = 4;
             lblCurrentTime.Text = "Current time: ";
             // 
+            // btnRunAsyncSynchronously
+            // 
+            btnRunAsyncSynchronously.Location = new Point(342, 262);
+            btnRunAsyncSynchronously.Name = "btnRunAsyncSynchronously";
+            btnRunAsyncSynchronously.Size = new Size(229, 23);
+            btnRunAsyncSynchronously.TabIndex = 5;
+            btnRunAsyncSynchronously.Text = "Run async process synchronously";
+            btnRunAsyncSynchronously.UseVisualStyleBackColor = true;
+            btnRunAsyncSynchronously.Click += btnRunAsyncSynchronously_Click;
+            // 
+            // lblRunAsyncCrossThreadUI
+            // 
+            lblRunAsyncCrossThreadUI.AutoSize = true;
+            lblRunAsyncCrossThreadUI.Location = new Point(342, 345);
+            lblRunAsyncCrossThreadUI.Name = "lblRunAsyncCrossThreadUI";
+            lblRunAsyncCrossThreadUI.Size = new Size(150, 15);
+            lblRunAsyncCrossThreadUI.TabIndex = 6;
+            lblRunAsyncCrossThreadUI.Text = "lblRunAsyncCrossThreadUI";
+            // 
+            // btnRunAsyncInCrossThread
+            // 
+            btnRunAsyncInCrossThread.Location = new Point(342, 319);
+            btnRunAsyncInCrossThread.Name = "btnRunAsyncInCrossThread";
+            btnRunAsyncInCrossThread.Size = new Size(229, 23);
+            btnRunAsyncInCrossThread.TabIndex = 7;
+            btnRunAsyncInCrossThread.Text = "Run async process in crossing UI thread";
+            btnRunAsyncInCrossThread.UseVisualStyleBackColor = true;
+            btnRunAsyncInCrossThread.Click += btnRunAsyncInCrossThread_Click;
+            // 
+            // lblRunAsyncProcess
+            // 
+            lblRunAsyncProcess.AutoSize = true;
+            lblRunAsyncProcess.Location = new Point(591, 221);
+            lblRunAsyncProcess.Name = "lblRunAsyncProcess";
+            lblRunAsyncProcess.Size = new Size(113, 15);
+            lblRunAsyncProcess.TabIndex = 8;
+            lblRunAsyncProcess.Text = "lblRunAsyncProcess";
+            // 
             // FrmContohAsyncSederhana
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblRunAsyncProcess);
+            Controls.Add(btnRunAsyncInCrossThread);
+            Controls.Add(lblRunAsyncCrossThreadUI);
+            Controls.Add(btnRunAsyncSynchronously);
             Controls.Add(lblCurrentTime);
             Controls.Add(btnRunAsync);
             Controls.Add(btnRunSyncProc);
@@ -116,5 +162,9 @@ namespace DiskusiAsyncAwaitDenganContohWinforms
         private Button btnRunAsync;
         private System.Windows.Forms.Timer timerBlockingTest;
         private Label lblCurrentTime;
+        private Button btnRunAsyncSynchronously;
+        private Label lblRunAsyncCrossThreadUI;
+        private Button btnRunAsyncInCrossThread;
+        private Label lblRunAsyncProcess;
     }
 }
