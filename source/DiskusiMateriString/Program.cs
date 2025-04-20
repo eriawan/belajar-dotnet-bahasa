@@ -27,9 +27,14 @@ namespace DiskusiMateriString
             //// contoh substring
             //string string07 = "nama: Eriawan Kusumawardhono".Substring(6);
             //Console.WriteLine($"string07 = {string07}");
-            string anystring = "Eriawan 😊👍ドページを切り替える方法";
-            Console.WriteLine(anystring);
-            //BenchmarkRunner.Run<BenchmarkManipulasiString>();
+            //string anystring = "Eriawan 😊👍ドページを切り替える方法";
+            //Console.WriteLine(anystring);
+            BenchmarkRunner.Run<BenchmarkManipulasiString>();
+            //var int32minvalue = int.MinValue;
+            //var int16minvalue = short.MaxValue;
+            //UInt16 uint16MinValue = UInt16.MinValue;
+            //Byte contohbyte = Byte.MinValue;
+            //string samplestring = "test";
         }
     }
 }

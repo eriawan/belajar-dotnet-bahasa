@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace DiskusiMateriString
 {
-    [MemoryDiagnoser]
+    [MemoryDiagnoser(true)]
     public class BenchmarkManipulasiString
     {
-        [Params(100, 1_000, 4_000)]
+        //[Params(200, 800, 1_500)] <-- This is the original Params attribute.
+        [Params(200, 700, 1_200)]
         public int JumlahLoop;
 
+        private const string sampleStringWithNumeric = "Eriawan1975";
+
         [Benchmark]
-        public void SubstringBiasa()
+        public void Substring_Biasa()
         {
             for (int i = 0; i < JumlahLoop; i++)
             {
@@ -23,11 +26,47 @@ namespace DiskusiMateriString
         }
 
         [Benchmark]
-        public void SubstringPakaiSpan()
+        public void Substring_ReadOnlySpan_AsSpan_StringConstructor()
         {
             for (int i = 0; i < JumlahLoop; i++)
             {
-                string anystring = new string("Halo Eriawan".AsSpan(5)); 
+                string anystring = new string("Halo Eriawan".AsSpan(5));
+            }
+        }
+
+        [Benchmark]
+        public void Substring_ReadOnlySpan_AsSpan_ToString()
+        {
+            for (int i = 0; i < JumlahLoop; i++)
+            {
+                string anystring = "Halo Eriawan".AsSpan(5).ToString();
+            }
+        }
+
+        [Benchmark]
+        public void Substring_ReadOnlySpan_AsSpan_TanpaToString()
+        {
+            for (int i = 0; i < JumlahLoop; i++)
+            {
+                _ = "Halo Eriawan".AsSpan(5);
+            }
+        }
+
+        [Benchmark]
+        public void IntParse_Subtring()
+        {
+            for (int i = 0; i < JumlahLoop; i++)
+            {
+                int parsed = int.Parse(sampleStringWithNumeric.Substring(7));
+            }
+        }
+
+        [Benchmark]
+        public void IntParse_AsSpan()
+        {
+            for (int i = 0; i < JumlahLoop; i++)
+            {
+                int parsed = int.Parse(sampleStringWithNumeric.AsSpan(7));
             }
         }
     }
