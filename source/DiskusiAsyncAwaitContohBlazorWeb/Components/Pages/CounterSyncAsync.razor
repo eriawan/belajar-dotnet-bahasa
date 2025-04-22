@@ -63,13 +63,13 @@
         counterSync++;
     }
 
-    private void RunAsynchronous()
+    private async Task RunAsynchronous()
     {
         // Simulate a long-running asynchronous operation for 20 seconds
-        Task.Delay(10000).ContinueWith(_ =>
+        await Task.Delay(10000).ContinueWith(async _ =>
         {
             counterAsync++;
-            InvokeAsync(StateHasChanged);
+            await InvokeAsync(StateHasChanged);
         });
     }
 
