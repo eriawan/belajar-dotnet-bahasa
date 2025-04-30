@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiAsyncAwaitDenganCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiAsyncAwaitContohBlazorWeb", "DiskusiAsyncAwaitContohBlazorWeb\DiskusiAsyncAwaitContohBlazorWeb.csproj", "{8BB5EB70-88C0-48C3-B135-63C1AB3F42A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIskusiCrossThreadWinforms", "DIskusiCrossThreadWinforms\DIskusiCrossThreadWinforms.csproj", "{3F8908FD-AE95-46A3-AB28-7B2496EC6482}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8BB5EB70-88C0-48C3-B135-63C1AB3F42A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB5EB70-88C0-48C3-B135-63C1AB3F42A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB5EB70-88C0-48C3-B135-63C1AB3F42A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8908FD-AE95-46A3-AB28-7B2496EC6482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8908FD-AE95-46A3-AB28-7B2496EC6482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8908FD-AE95-46A3-AB28-7B2496EC6482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8908FD-AE95-46A3-AB28-7B2496EC6482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
