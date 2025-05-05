@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace DiskusiCancelationTokenWinforms
@@ -45,18 +46,29 @@ namespace DiskusiCancelationTokenWinforms
             CancellationToken token = _cancellationTokenSource.Token;
             try
             {
-                await Task.Run(() => RunLongBlockingProcess(token));
+                await Task.Run(() => RunLongBlockingProcess(token)).ConfigureAwait(false);
+                lblTaskStatus.Text = "Task completed";
             }
             catch (OperationCanceledException oex)
             {
                 lblTaskStatus.Text = "Task canceled!";
-                lblIterationSequence.Text += ". Now it is canceled."; 
+                lblIterationSequence.Text += ". Now it is canceled.";
             }
         }
 
         private void btnCancelAsync_Click(object sender, EventArgs e)
         {
             _cancellationTokenSource.Cancel();
+        }
+
+        private void FrmContohCancelationToken_Load(object sender, EventArgs e)
+        {
+            timerJam.Enabled = true;
+        }
+
+        private void timerJam_Tick(object sender, EventArgs e)
+        {
+            lblJamSekarang.Text = "Jam saat ini: " + DateTime.Now.ToString("hh:mm:ss");
         }
     }
 }
