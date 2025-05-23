@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiCancelationTokenWinf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiAwaitableWinforms", "DiskusiAwaitableWinforms\DiskusiAwaitableWinforms.csproj", "{F9233725-9094-4C5D-B7F3-B67BBE9EDD0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiIntroParallelConsole", "DiskusiIntroParallelConsole\DiskusiIntroParallelConsole.csproj", "{7CF677CA-C936-4320-AB1C-C6079374595C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{F9233725-9094-4C5D-B7F3-B67BBE9EDD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9233725-9094-4C5D-B7F3-B67BBE9EDD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9233725-9094-4C5D-B7F3-B67BBE9EDD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CF677CA-C936-4320-AB1C-C6079374595C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF677CA-C936-4320-AB1C-C6079374595C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF677CA-C936-4320-AB1C-C6079374595C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF677CA-C936-4320-AB1C-C6079374595C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
