@@ -10,8 +10,8 @@ namespace DiskusiBenchmarkParallelAsync
     [MemoryDiagnoser(true)]
     public class BenchmarkParallelAsync
     {
-        //[Params(50, 100, 500)]
-        [Params(50, 100 )]
+        [Params(50, 100, 500, 1000)]
+        //[Params(50, 100 )]
         public int NumberOfLoops;
 
         [Benchmark]

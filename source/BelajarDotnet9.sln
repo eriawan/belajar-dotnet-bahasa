@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiParallelAsyncWinform
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiBenchmarkParallelAsync", "DiskusiBenchmarkParallelAsync\DiskusiBenchmarkParallelAsync.csproj", "{8DF1C0D0-CC91-4625-A249-E8AAAD27BD88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiTestArrayExceptionDiTaskWhenAll", "DiskusiTestArrayExceptionDiTaskWhenAll\DiskusiTestArrayExceptionDiTaskWhenAll.csproj", "{27832A9D-69E8-48C5-A800-5095D46BCE15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{8DF1C0D0-CC91-4625-A249-E8AAAD27BD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF1C0D0-CC91-4625-A249-E8AAAD27BD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF1C0D0-CC91-4625-A249-E8AAAD27BD88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
