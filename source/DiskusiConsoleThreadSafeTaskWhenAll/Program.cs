@@ -1,10 +1,10 @@
-﻿namespace DiskusiTestArrayExceptionDiTaskWhenAll
+﻿namespace DiskusiConsoleThreadSafeTaskWhenAll
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Test Array Exception in Task.WhenAll!");
+            Console.WriteLine("Hello, Contoh pemakaian ImmutableList di dalamTask.WhenAll selalu thread-safe!");
             int exceptionOccurrence = 0;
             for (int i = 1; i <= 40; i++)
             {
@@ -12,7 +12,7 @@
                 //await MiscelanousComputeProcessSimplified.TaskWhenAll_ProcessIterateFor();
                 try
                 {
-                    await MiscelanousComputeProcessSimplified.TaskWhenAll_ProcessIterateFor();
+                    await MiscelanousComputeProcessSimplified.TaskWhenAll_ProcessIterateFor_UsingImmutableList();
                 }
                 catch (Exception exc)
                 {
@@ -21,6 +21,7 @@
                 }
             }
             Console.WriteLine($"number of exceptions = {exceptionOccurrence}");
+
         }
     }
 }

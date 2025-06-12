@@ -1,4 +1,10 @@
-﻿namespace DiskusiTestArrayExceptionDiTaskWhenAll
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DiskusiTestArrayExceptionDiTaskWhenAll.NetFX
 {
     internal class Program
     {
@@ -9,7 +15,6 @@
             for (int i = 1; i <= 40; i++)
             {
                 Console.WriteLine($"iteration number {i}");
-                //await MiscelanousComputeProcessSimplified.TaskWhenAll_ProcessIterateFor();
                 try
                 {
                     await MiscelanousComputeProcessSimplified.TaskWhenAll_ProcessIterateFor();

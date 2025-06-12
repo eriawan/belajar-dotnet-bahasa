@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiBenchmarkParallelAsy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiTestArrayExceptionDiTaskWhenAll", "DiskusiTestArrayExceptionDiTaskWhenAll\DiskusiTestArrayExceptionDiTaskWhenAll.csproj", "{27832A9D-69E8-48C5-A800-5095D46BCE15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiTestArrayExceptionDiTaskWhenAll.NetFX", "DiskusiTestArrayExceptionDiTaskWhenAll.NetFX\DiskusiTestArrayExceptionDiTaskWhenAll.NetFX.csproj", "{5F0AB7BB-5D2C-4E73-A32F-6098C93A9E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskusiConsoleThreadSafeTaskWhenAll", "DiskusiConsoleThreadSafeTaskWhenAll\DiskusiConsoleThreadSafeTaskWhenAll.csproj", "{05305429-99E2-4927-A724-5EB14A5B6DBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27832A9D-69E8-48C5-A800-5095D46BCE15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0AB7BB-5D2C-4E73-A32F-6098C93A9E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0AB7BB-5D2C-4E73-A32F-6098C93A9E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0AB7BB-5D2C-4E73-A32F-6098C93A9E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0AB7BB-5D2C-4E73-A32F-6098C93A9E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05305429-99E2-4927-A724-5EB14A5B6DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05305429-99E2-4927-A724-5EB14A5B6DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05305429-99E2-4927-A724-5EB14A5B6DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05305429-99E2-4927-A724-5EB14A5B6DBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
