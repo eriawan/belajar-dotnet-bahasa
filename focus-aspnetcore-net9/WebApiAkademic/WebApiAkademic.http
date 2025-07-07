@@ -1,0 +1,18 @@
+@WebApiAkademic_HostAddress = http://localhost:5075
+@weatherpenomenon = weatherphenomenon
+
+GET {{WebApiAkademic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{WebApiAkademic_HostAddress}}/{{weatherpenomenon}}
+Accept: application/json
+
+###
+
+POST {{WebApiAkademic_HostAddress}}/{{weatherpenomenon}}?phenomenonname=angin%20sepi
+Content-Type: application/json
+
+
+###
