@@ -13,7 +13,10 @@ namespace WebApiAkademic.Data
             var services = scope.ServiceProvider;
             var context = services.GetRequiredService<AcademicRegistrationDbContext>();
             bool DbCreated = context.Database.EnsureCreated();
-            InitializeData(context);
+            if (DbCreated)
+            {
+                InitializeData(context); 
+            }
         }
 
         private static void InitializeData(AcademicRegistrationDbContext context)

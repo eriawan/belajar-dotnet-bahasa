@@ -13,10 +13,10 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        //builder.Services.AddSqlServer<AcademicRegistrationDbContext>(builder.Configuration.GetConnectionString("Academik"));
+        //builder.Services.AddSqlServer<AcademicRegistrationDbContext>(builder.Configuration.GetConnectionString("AcademicRegistrationContext"));
         builder.Services.AddDbContext<AcademicRegistrationDbContext>(optionsAction =>
         {
-            optionsAction.UseSqlServer(builder.Configuration.GetConnectionString("Academik"));
+            optionsAction.UseSqlServer(builder.Configuration.GetConnectionString("AcademicRegistrationContext"));
         });
 
         // Add services to the container.
@@ -32,7 +32,9 @@ public class Program
         app.CreateDbIfNotExists();
 
         // Configure the HTTP request pipeline.
+#if DEBUG
         app.UseExceptionHandler();
+#endif
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
