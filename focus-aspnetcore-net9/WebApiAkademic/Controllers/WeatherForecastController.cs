@@ -12,7 +12,7 @@ public class WeatherForecastController : ControllerBase
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private static List<string> weatherPhenomenons = new() { "angin brubu", "angin semilir" };
+    private static List<string> weatherPhenomenons = new() { "angin brubu", "angin semilir", "masuk angin", "angin tornado" };
 
     private readonly ILogger<WeatherForecastController> _logger;
 
@@ -36,8 +36,20 @@ public class WeatherForecastController : ControllerBase
     [HttpPost]
     [Route("/weatherphenomenon")]
     [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
     public IActionResult AddPhenomenon(string phenomenonName)
     {
+        bool phenomenonFound = weatherPhenomenons.Any(pName => String.Compare(pName, phenomenonName, true) == 0);
+        if (phenomenonFound)
+        {
+            var problemDetail = new ProblemDetails();
+            problemDetail.Status = StatusCodes.Status409Conflict;
+            problemDetail.Title = "Conflict: failed to add phenomenonName into phenomenonName data.";
+            problemDetail.Detail = $"Phenomenon name \"{phenomenonName}\" cannot be inserted because it already exists.";
+            problemDetail.Type = "";
+            problemDetail.Extensions["traceId"] = HttpContext.TraceIdentifier;
+            return new ConflictObjectResult(problemDetail);
+        }
         weatherPhenomenons.Add(phenomenonName);
         return new CreatedResult();
     }
