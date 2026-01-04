@@ -36,6 +36,12 @@ Accept: application/json
 
 ###
 
+GET http://localhost:5075/GeoIndoProvinces/5
+Accept: application/json
+
+
+###
+
 GET https://localhost:7218/GeoIndoProvinces/5
 Accept: application/json
 
