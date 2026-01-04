@@ -13,7 +13,7 @@ namespace WebApiAkademic.Data.POCO
         public string NamaJurusan { get; set; } = string.Empty;
         public string JenjangStudi { get; set; } = string.Empty;
 
-        public List<MasterMahasiswa> MasterMahasiswas { get; set; }
+        //public List<TrnJurusanMahasiswa> TrnJurusanMahasiswas { get; set; } = new();
 
     }
 }

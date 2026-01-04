@@ -7,28 +7,31 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiAkademic.Data;
 using WebApiAkademic.Data.POCO;
+using WebApiAkademic.WebUtilities;
 
 namespace WebApiAkademic.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class MasterJurusansController : ControllerBase
+    [Route("[controller]")]
+    public class MasterJurusansController : ControllerBase, IEntityControllerInfo
     {
         private readonly AcademicRegistrationDbContext _context;
+
+        public string FriendlyTableName => "Master jurusan";
+
+        public string FriendlyPKName => "Id jurusan";
 
         public MasterJurusansController(AcademicRegistrationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/MasterJurusans
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MasterJurusan>>> GetJurusans()
         {
             return await _context.Jurusans.ToListAsync();
         }
 
-        // GET: api/MasterJurusans/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MasterJurusan>> GetMasterJurusan(int id)
         {
@@ -36,7 +39,7 @@ namespace WebApiAkademic.Controllers
 
             if (masterJurusan == null)
             {
-                return NotFound();
+                return this.GenerateNotFoundForGetResult(id, HttpContext.TraceIdentifier);
             }
 
             return masterJurusan;
@@ -76,23 +79,23 @@ namespace WebApiAkademic.Controllers
         // POST: api/MasterJurusans
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<MasterJurusan>> PostMasterJurusan(MasterJurusan masterJurusan)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        public ActionResult<MasterJurusan> PostMasterJurusan([FromBody] MasterJurusan masterJurusan)
         {
-            _context.Jurusans.Add(masterJurusan);
+            if (MasterJurusanExists(masterJurusan.JurusanId))
+            {
+                //return Conflict();
+                return this.GenerateConflictResult(masterJurusan.JurusanId, HttpContext.TraceIdentifier);
+            }
             try
             {
-                await _context.SaveChangesAsync();
+                _context.Jurusans.Add(masterJurusan);
+                _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (MasterJurusanExists(masterJurusan.JurusanId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return CreatedAtAction("GetMasterJurusan", new { id = masterJurusan.JurusanId }, masterJurusan);

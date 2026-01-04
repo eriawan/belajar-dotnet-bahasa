@@ -15,7 +15,7 @@ namespace WebApiAkademic.Data
             bool DbCreated = context.Database.EnsureCreated();
             if (DbCreated)
             {
-                InitializeData(context); 
+                InitializeData(context);
             }
         }
 
@@ -62,24 +62,46 @@ namespace WebApiAkademic.Data
             var jurusan_S1Informatika = jurusans[0];
             var jurusan_S1IlmuKomputer = jurusans[2];
 
-            List<MasterMahasiswa> mahasiswas;
+            List<MasterMahasiswa> mahasiswas = new();
             if (!context.Mahasiswas.Any())
             {
                 mahasiswas = new List<MasterMahasiswa>
                 {
-                    new() { MahasiswaId = 2501, NamaDepan="Budi", NamaBelakang ="Suyono", Gender = 1,
+                    new() { MahasiswaId = 2501, NamaDepan ="Budi", NamaBelakang ="Suyono", Gender = 1,
                         AlamatEmail ="email@email.com", TglMendaftar = date20250101, DateEntry=date20250101,
-                        DateModified = null, Jurusan = jurusan_S1IlmuKomputer },
-                    new() { MahasiswaId = 2502, NamaDepan="Muhammad", NamaBelakang ="Karsono", Gender = 1,
+                        DateModified = null },
+                    new() { MahasiswaId = 2502, NamaDepan ="Muhammad", NamaBelakang ="Karsono", Gender = 1,
                         AlamatEmail ="email@email.com", TglMendaftar = date20250101, DateEntry = date20250101,
-                        DateModified = null, Jurusan = jurusan_S1Informatika },
-                    new() { MahasiswaId = 2503, NamaDepan="Dian", NamaBelakang ="Yuliani", Gender = 2,
+                        DateModified = null },
+                    new() { MahasiswaId = 2503, NamaDepan ="Dian", NamaBelakang ="Yuliani", Gender = 2,
                         AlamatEmail ="email@email.com", TglMendaftar = date20250101, DateEntry = date20250101,
-                        DateModified = null, Jurusan = jurusan_S1Informatika }
+                        DateModified = null }
                 };
                 context.AddRange(mahasiswas);
                 context.SaveChanges();
             }
+
+            TrnJurusanMahasiswa jurusanMahasiswa2501 =
+                new()
+                {
+                    JurusanMahasiswaId = 1,
+                    Jurusan = jurusan_S1Informatika,
+                    Mahasiswa = mahasiswas[0],
+                    DateEntry = date20250101,
+                    DateModified = null
+                };
+            TrnJurusanMahasiswa jurusanMahasiswa2502 =
+                new()
+                {
+                    JurusanMahasiswaId = 2,
+                    Jurusan = jurusan_S1IlmuKomputer,
+                    Mahasiswa = mahasiswas[1],
+                    DateEntry = date20250101,
+                    DateModified = null
+                };
+            context.TrnJurusanMahasiswas.Add(jurusanMahasiswa2501);
+            context.TrnJurusanMahasiswas.Add(jurusanMahasiswa2502);
+            context.SaveChanges();
         }
     }
 }

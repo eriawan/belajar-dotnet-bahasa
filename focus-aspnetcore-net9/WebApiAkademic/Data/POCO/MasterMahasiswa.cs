@@ -18,7 +18,5 @@ namespace WebApiAkademic.Data.POCO
 
         public DateTime TglMendaftar { get; set; }
 
-        public MasterJurusan Jurusan { get; set; }
-
     }
 }
