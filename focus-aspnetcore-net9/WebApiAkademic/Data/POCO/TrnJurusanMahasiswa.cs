@@ -9,7 +9,7 @@ namespace WebApiAkademic.Data.POCO
     public class TrnJurusanMahasiswa : AbstractTableAuditTrail
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long JurusanMahasiswaId { get; set; }
 
         public required MasterJurusan Jurusan { get; set; }

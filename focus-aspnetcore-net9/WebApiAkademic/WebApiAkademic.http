@@ -14,5 +14,85 @@ Accept: application/json
 POST {{WebApiAkademic_HostAddress}}/{{weatherpenomenon}}?phenomenonname=angin%20sepi
 Content-Type: application/json
 
+### Sample sending POST request (Create or INSERT) with existing data
+
+POST {{WebApiAkademic_HostAddress}}/{{weatherpenomenon}}?phenomenonname=angin%20brubu
+Content-Type: application/json
+
+###
+
+GET https://localhost:7218/GeoIndoProvinces
+Accept: application/json
+
+###
+
+GET http://localhost:5075/GeoIndoProvinces
+Accept: application/json
+
+###
+
+GET http://localhost:5075/GeoIndoProvinces/100
+Accept: application/json
+
+###
+
+GET https://localhost:7218/GeoIndoProvinces/5
+Accept: application/json
+
+###
+
+GET {{WebApiAkademic_HostAddress}}/GeoIndoProvinces/100
+Accept: application/json
+
+###
+
+DELETE {{WebApiAkademic_HostAddress}}/GeoIndoProvinces/100
+Accept: application/json
+
+###
+
+GET {{WebApiAkademic_HostAddress}}/MasterMahasiswas
+
+###
+
+GET {{WebApiAkademic_HostAddress}}/MasterMahasiswas/2506
+
+###
+
+POST {{WebApiAkademic_HostAddress}}/MasterMahasiswas
+Content-Type: application/json
+
+{
+  "mahasiswaId": 2506,
+  "namaDepan": "Budianto",
+  "namaBelakang": "Hadianto",
+  "gender": 1,
+  "alamatEmail": "email@email.com",
+  "tglMendaftar": "2025-01-01T00:00:00",
+  "dateEntry": "2025-01-01T00:00:00",
+  "dateModified": null
+}
+
+###
+
+GET https://localhost:7218/MasterMahasiswas/2505
+
+###
+
+GET {{WebApiAkademic_HostAddress}}/openapi/v1.json
+
+###
+
+GET https://localhost:44397/api/weatherforecast
+Accept: application/json
+
+###
+
+GET https://localhost:44397/api/weatherforecast/2
+
+###
+
+GET https://localhost:44397/api/weatherforecast/2
+Accept: application/xml
 
 ###
